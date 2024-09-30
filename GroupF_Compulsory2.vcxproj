@@ -128,10 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GroupF_Compulsory2.cpp" />
-    <ClCompile Include="wesam.cpp" />
+    <ClCompile Include="Philip.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="wesam.h" />
+    <ClInclude Include="Philip.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
