@@ -1,20 +1,29 @@
-// GroupF_Compulsory2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
-
+#include <string>
 int main()
 {
-    std::cout << "Hello World!\n";
+    //If we make a new gamemode, this is where we ask the user which mode to choose. For now, line 5 does nothing.
+    
+    //This line will call startGame(), which I will not add until that has been developed more.
+    std::cout << "Do you want to battle again? (y/n)\n";
+    std::string input;
+    bool answeredWhetherToTryAgain = false;
+    while (answeredWhetherToTryAgain = false)
+    {
+        std::cin >> (input);
+        switch (input)
+        {
+        case "y":
+            main();
+            answeredWhetherToTryAgain = true;
+            break;
+        case "n":
+            answeredWhetherToTryAgain = true;
+            break;
+        default:
+            std::cout << "Invalid input.\n"
+            break;
+        }
+    }
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
