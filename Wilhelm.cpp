@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Wilhelm.h"
 using namespace std;
 
@@ -12,19 +13,32 @@ private:
 
 public:
 	void setHealth(int health) {
+
 		maxHealth = health;
 	}
 	void setLAttack(int lightDamage) {
+
 		light_attack = lightDamage;
 	}
 	void setHAttack(int hardDamage) {
+
 		hard_attack = hardDamage;
 	}
 	void attack(int damage) {
+
 		currentHealth -= damage;
+
 	}
 	void heal(int healing) {
+
 		currentHealth += healing;
+
+	}
+	void print(string text) {
+		cout << "string";
 	}
 };
 
+
+//Player_Base player;
+//player.setHealth()
