@@ -11,19 +11,33 @@ int main()
     while (answeredWhetherToTryAgain = false)
     {
         std::cin >> (input);
-        switch (input)
+        
+        if (input == "y")
         {
-        case "y": //Note: this causes an error, as it does not recognize y as a string. Will fix on thursday.
-            main();
             answeredWhetherToTryAgain = true;
-            break;
-        case "n":
-            answeredWhetherToTryAgain = true;
-            break;
-        default:
-            std::cout << "Invalid input.\n"
-            break;
         }
+        else if (input == "n")
+        {
+            answeredWhetherToTryAgain = true;
+        }
+        else
+        {
+            std::cout << "Invalid input.\n";
+        }
+
+        //switch (input)
+        //{
+        //case "y": //Note: this causes an error, as it does not recognize y as a string. Will fix on thursday.
+        //    main();
+        //    answeredWhetherToTryAgain = true;
+        //    break;
+        //case "n":
+        //    answeredWhetherToTryAgain = true;
+        //    break;
+        //default:
+        //    std::cout << "Invalid input.\n";
+        //    break;
+        //}
     }
     return 0;
 }
