@@ -1,15 +1,15 @@
 #include <iostream>
 #include <string>
-#include "Wilhelm.h"
+#include "Player.h"
 using namespace std;
 
 
 class Player_Base {
 private:
-	int maxHealth;
+	int maxHealth = 0;
 	int currentHealth = maxHealth;
-	int light_attack;
-	int hard_attack;
+	int light_attack = 0;
+	int hard_attack = 0;
 
 public:
 	void setHealth(int health) {
@@ -39,6 +39,10 @@ public:
 	}
 };
 
+void main() {
+	Player_Base player;
+	player.setHealth(20);
+	player.setLAttack(2);
+	player.setHAttack(5);
 
-//Player_Base player;
-//player.setHealth()
+}

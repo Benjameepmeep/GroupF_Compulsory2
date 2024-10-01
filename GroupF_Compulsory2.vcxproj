@@ -137,8 +137,8 @@
   <ItemGroup>
     <ClInclude Include="Havard.h" />
     <ClInclude Include="Philip.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="wesam.h" />
-    <ClInclude Include="Wilhelm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
