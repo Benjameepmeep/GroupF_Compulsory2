@@ -1,7 +1,5 @@
-#pragma once
-
 #include <iostream>
-#include "Wilhelm.h"
+#include "Player.h"
 
 class Player_Base 
 {
