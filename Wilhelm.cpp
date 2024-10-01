@@ -1,30 +1,30 @@
-/*Dette er en melding*/
-<<<<<<< Updated upstream
-=======
 #include <iostream>
+#include "Wilhelm.h"
 using namespace std;
 
 
 class Player_Base {
 private:
-	int health;
+	int maxHealth;
+	int currentHealth = maxHealth;
 	int light_attack;
 	int hard_attack;
 
 public:
-	void setHealth(int h) {
-		health = h;
+	void setHealth(int health) {
+		maxHealth = health;
 	}
-	void setLAttack(int la) {
-		light_attack = la;
+	void setLAttack(int lightDamage) {
+		light_attack = lightDamage;
 	}
-	void setHAttack(int ha) {
-		hard_attack = ha;
+	void setHAttack(int hardDamage) {
+		hard_attack = hardDamage;
 	}
-
+	void attack(int damage) {
+		currentHealth -= damage;
+	}
+	void heal(int healing) {
+		currentHealth += healing;
+	}
 };
 
-void main() {
-
-}
->>>>>>> Stashed changes
