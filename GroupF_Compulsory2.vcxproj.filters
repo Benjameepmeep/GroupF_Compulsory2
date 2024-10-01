@@ -21,9 +21,27 @@
     <ClCompile Include="Philip.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Havard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wesam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wilhelm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Philip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Havard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wesam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wilhelm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,6 +1,5 @@
 /*Dette er en melding*/
 <<<<<<< Updated upstream
-// Test
 =======
 #include <iostream>
 using namespace std;
