@@ -13,7 +13,7 @@ int main()
         std::cin >> (input);
         switch (input)
         {
-        case "y":
+        case "y": //Note: this causes an error, as it does not recognize y as a string. Will fix on thursday.
             main();
             answeredWhetherToTryAgain = true;
             break;
