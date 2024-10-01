@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-int main()
+/* int main()
 {
     //If we make a new gamemode, this is where we ask the user which mode to choose. For now, line 5 does nothing.
     
@@ -40,4 +40,4 @@ int main()
         //}
     }
     return 0;
-}
+}*/

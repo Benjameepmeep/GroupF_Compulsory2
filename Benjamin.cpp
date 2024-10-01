@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Player.h"
 
 class Player_Base 
@@ -35,7 +36,7 @@ public:
 
 	void print()
 	{
-		// Print what has happened (e.g. "PLayer took 3 damage from Enemy)
+		std::cout << "Aha! I, the machine am writing to you, the silly programmer!" << std::endl;
 	}
 };
 
