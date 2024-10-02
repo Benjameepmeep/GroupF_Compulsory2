@@ -1,11 +1,10 @@
+#include "Philip.h"
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-#include "Philip.h"
 
 int StartGame() {
-    for (int i = 0; i < 5; i++)
-        cout << rand() << " ";
-
+    bool turn = rand() % 2; //1 = playerturn, 0 = enemyturn
+    cout << "YappYappYapp";
     return 0;
 }
