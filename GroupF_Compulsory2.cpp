@@ -4,8 +4,9 @@
 #include <iostream>
 #include "Philip.h"
 using namespace std;
+
 int main()
 {
-    int StartGame();
+    StartGame();
     return 0;
 }
