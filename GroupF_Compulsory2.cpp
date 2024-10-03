@@ -3,10 +3,10 @@
 
 #include <iostream>
 #include "Philip.h"
-using namespace std;
 
 int main()
 {
-    StartGame();
+    startGame();
+    std::cout << RNG(2, 1000);
     return 0;
 }
