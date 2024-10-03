@@ -3,25 +3,25 @@
 #include "GroupF_Compulsory2.h"
 void requestRestart()
 {
-    std::cout << "Do you want to battle again? (y/n)\n";
     std::string input = "NoInput";
     bool answeredWhetherToTryAgain = false;
     while (answeredWhetherToTryAgain == false)
     {
+        std::cout << "Do you want to battle again? (y/n)\n";
         std::cin >> input;
 
         if (input == "y")
         {
-            main();
+            main(); //Restarts program by calling main
             answeredWhetherToTryAgain = true;
         }
-        else if (input == "n")
+        else if (input == "n") //Ends program
         {
             answeredWhetherToTryAgain = true;
         }
         else
         {
-            std::cout << "Invalid input.\n";
+            std::cout << "Invalid input.\n"; //asks again
         }
     }
 }

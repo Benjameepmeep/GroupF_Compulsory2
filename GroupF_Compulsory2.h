@@ -2,5 +2,5 @@
 
 void requestRestart();
 void start();
-void StartGame();
+int StartGame();
 int main();
