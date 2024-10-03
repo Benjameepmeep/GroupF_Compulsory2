@@ -95,14 +95,18 @@ void startGame(int playerHealth, int playerDamage, int playerHealing, int enemyH
 	{
 		while (playerHealth > 0 and enemyHealth > 0)
 		{
-			int action = rand() % 2 + 1;
-			switch (action)
+			int action1 = rand() % 2 + 1;
+			switch (action1)
 			{
 			case 1:
 				enemyHealth -= playerDamage;
+				std::cout << "Players health: " << playerHealth << "\n";
+				std::cout << "Enemys health: " << enemyHealth << "\n";
 				break;
 			case 2:
 				playerHealth += playerHealing;
+				std::cout << "Players health: " << playerHealth << "\n";
+				std::cout << "Enemys health: " << enemyHealth << "\n";
 				break;
 			}
 
@@ -115,16 +119,20 @@ void startGame(int playerHealth, int playerDamage, int playerHealing, int enemyH
 
 			// TODO: fix 
 
-			/*int action = rand() % 2 + 1;
-			switch (action)
+			int action2 = rand() % 2 + 1;
+			switch (action2)
 			{
 			case 1:
 				playerHealth -= enemyDamage;
+				std::cout << "Players health: " << playerHealth << "\n";
+				std::cout << "Enemys health: " << enemyHealth << "\n";
 				break;
 			case 2:
 				enemyHealth += enemyHealing;
+				std::cout << "Players health: " << playerHealth << "\n";
+				std::cout << "Enemys health: " << enemyHealth << "\n";
 				break;
-			}*/
+			}
 
 			if (playerHealth <= 0) {
 				std::cout << "You lost! \n";
@@ -140,13 +148,13 @@ int main()
 	//Start();
 	Player_Base player;
 	player.setHealth(20);
-	player.setHealingStat(4);
+	player.setHealingStat(2);
 	player.setLAttack(2);
 	player.setHAttack(5);
 	
 	Player_Base enemy;
 	enemy.setHealth(15);
-	enemy.setHealingStat(3);
+	enemy.setHealingStat(1);
 	enemy.setLAttack(3);
 	enemy.setHAttack(7);
 
