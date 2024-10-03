@@ -73,7 +73,7 @@ class Player_Base {
 
 int main() {	
 
-	Start();
+	start();
 
 	Player_Base player;
 	player.setHealth(20);

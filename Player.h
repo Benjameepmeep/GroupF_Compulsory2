@@ -2,5 +2,5 @@
 #include <iostream>
 #include <string>
 
-void ReceivePlayerInput();
-void Start();
+void receivePlayerInput();
+void start();

@@ -62,7 +62,7 @@ void Player_Base::Speak()
 
 // Below function is mostly for testing purposes and receiving input. Works well!
 
-void ReceivePlayerInput()
+void receivePlayerInput()
 {
 	Player_Base playerBase;
 	playerBase.UpdateHealth(3);
@@ -147,7 +147,7 @@ void Boss::Attack() const
 
 #pragma endregion
 
-void Start()
+void start()
 {
 #pragma region Enemy and Boss
 
@@ -182,6 +182,7 @@ void Start()
 
 #pragma region Testing Player Input
 
-	ReceivePlayerInput();
-}
+	receivePlayerInput();
+
 #pragma endregion
+}
