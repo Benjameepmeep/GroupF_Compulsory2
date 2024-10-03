@@ -27,9 +27,13 @@ void requestRestart()
 }
 int main()
 {
+    unsigned int totalGold = 0;
     //If we make a new gamemode, this is where we ask the user which mode to choose. For now, line 5 does nothing.
     
     //This line will call startGame(), which I will not add until that has been developed more.
-    requestRestart();
+    getGold();
+    totalGold += getGold();
+    std::cout << "You got " << getGold() << " gold from that fight, and now have " << totalGold << " gold.";
+    //requestRestart();
     return 0;
 }
