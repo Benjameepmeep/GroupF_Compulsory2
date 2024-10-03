@@ -4,7 +4,11 @@
 using namespace std;
 
 int StartGame() {
-    bool turn = rand() % 2; //1 = playerturn, 0 = enemyturn
-    cout << "YappYappYapp" << endl;
+    for (int i = 0; i < 10; i++)
+    {
+        cout << rand()%2 << endl;
+    }
+    int turn = rand() % 2; //1 = playerturn, 0 = enemyturn
+    cout << turn << endl;
     return 0;
 }
