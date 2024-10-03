@@ -2,6 +2,11 @@
 
 #include <iostream>
 #include "Wilhelm.h"
+#include "GroupF_Compulsory2.h"
+
+void start() {
+
+}
 
 class Player_Base 
 {
