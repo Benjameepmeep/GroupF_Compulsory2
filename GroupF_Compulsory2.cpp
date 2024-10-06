@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include "Philip.h"
+#include "Player.h"
 
 int main()
 {
+    Wilhelm(); //This runs the game, just missing a while loop to play the game again
     startGame();
     std::cout << RNG(2, 1000);
     return 0;

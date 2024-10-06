@@ -4,3 +4,4 @@
 
 void receivePlayerInput();
 void start();
+int Wilhelm();

@@ -33,16 +33,6 @@ public:
 		hard_attack = hardDamage;
 	}
 
-	int getLAttack()
-	{
-		return light_attack;
-	}
-
-	int getHAttack()
-	{
-		return hard_attack;
-	}
-
 	int getHealth()
 	{
 		return health;
@@ -56,7 +46,7 @@ public:
 	int getDamage()
 	{
 		int critChance = rand() % 5 + 1;
-		int damage;
+		int damage = 0;
 
 		switch (critChance)
 		{
@@ -70,94 +60,101 @@ public:
 		return damage;
 	}
 
-	/*void attack(int dmg)
-	{
-		health -= dmg;
-	}
-
-	void heal()
-	{
-		health += healingStat;
-	}*/
-
-	/*void print(std::string text)
-	{
-		std::cout << text;
-	}*/
-
 };
 
-void startGame(int playerHealth, int playerDamage, int playerHealing, int enemyHealth, int enemyDamage, int enemyHealing)
-{
+//TODO:
+//make a while loop, so the player can choose to play again
 
-	bool startOver = true;
-	while (startOver = true)
-	{
-		while (playerHealth > 0 and enemyHealth > 0)
+void startGameWilhelm()
+{
+	int wins = 0;
+	int losses = 0;
+
+	//bool startOver = true;
+	//while (startOver = true)
+
+
+	//{
+
+
+		Player_Base player;
+		player.setHealth(10);
+		player.setHealingStat(2);
+		player.setLAttack(2);
+		player.setHAttack(3);
+
+		Player_Base enemy;
+		enemy.setHealth(10);
+		enemy.setHealingStat(3);
+		enemy.setLAttack(1);
+		enemy.setHAttack(6);
+
+
+		while (player.getHealth() > 0 and enemy.getHealth() > 0)
 		{
-			int action1 = rand() % 2 + 1;
+			int action1 = rand() % 5 + 1;
 			switch (action1)
 			{
 			case 1:
-				enemyHealth -= playerDamage;
-				std::cout << "Players health: " << playerHealth << "\n";
-				std::cout << "Enemys health: " << enemyHealth << "\n";
+				player.setHealth(player.getHealth() + player.getHealingstat());
+				std::cout << "You healed yourself, and healed " << player.getHealingstat() << "\n";
+				std::cout << "Your health: " << player.getHealth() << "\n";
+				std::cout << "Enemy's health: " << enemy.getHealth() << "\n";
 				break;
-			case 2:
-				playerHealth += playerHealing;
-				std::cout << "Players health: " << playerHealth << "\n";
-				std::cout << "Enemys health: " << enemyHealth << "\n";
+			default:
+				int playerDamage = player.getDamage();
+				enemy.setHealth(enemy.getHealth() - playerDamage);
+				std::cout << "You attacked the enemy, and did " << playerDamage << " damage\n";
+				std::cout << "Your health: " << player.getHealth() << "\n";
+				std::cout << "Enemy's health: " << enemy.getHealth() << "\n";
 				break;
 			}
 
-			if (enemyHealth <= 0)
+			if (enemy.getHealth() <= 0)
 			{
 				std::cout << "You won! \n";
-				break;
+				wins += 1;
 				//startOver = false;
 			}
 
-			// TODO: fix 
-
-			int action2 = rand() % 2 + 1;
-			switch (action2)
+			if (enemy.getHealth() > 0)
 			{
-			case 1:
-				playerHealth -= enemyDamage;
-				std::cout << "Players health: " << playerHealth << "\n";
-				std::cout << "Enemys health: " << enemyHealth << "\n";
-				break;
-			case 2:
-				enemyHealth += enemyHealing;
-				std::cout << "Players health: " << playerHealth << "\n";
-				std::cout << "Enemys health: " << enemyHealth << "\n";
-				break;
-			}
 
-			if (playerHealth <= 0) {
-				std::cout << "You lost! \n";
-				//startOver = false;
-				break;
+				int action2 = rand() % 5 + 1;
+				switch (action2)
+				{
+				case 1:
+					enemy.setHealth(enemy.getHealth() + enemy.getHealingstat());
+					std::cout << "The enemy healed themself, and healed " << enemy.getHealingstat() << "\n";
+					std::cout << "Players health: " << player.getHealth() << "\n";
+					std::cout << "Enemys health: " << enemy.getHealth() << "\n";
+					break;
+				default:
+					int enemyDamage = enemy.getDamage();
+					player.setHealth(player.getHealth() - enemyDamage);
+					std::cout << "The enemy attacked you, and did " << enemyDamage << " damage\n";
+					std::cout << "Players health: " << player.getHealth() << "\n";
+					std::cout << "Enemys health: " << enemy.getHealth() << "\n";
+					break;
+				}
+
+				if (player.getHealth() <= 0)
+				{
+					std::cout << "You lost! \n";
+					//startOver = false;
+					losses += 1;
+				}
 			}
 		}
-	}
+		//}
+	
+
+	std::cout << "Wins = " << wins << "\nLosses = " << losses << std::endl;
 }
 
-int main() 
+int Wilhelm() 
 {	
-	//Start();
-	Player_Base player;
-	player.setHealth(20);
-	player.setHealingStat(2);
-	player.setLAttack(2);
-	player.setHAttack(5);
-	
-	Player_Base enemy;
-	enemy.setHealth(15);
-	enemy.setHealingStat(1);
-	enemy.setLAttack(3);
-	enemy.setHAttack(7);
-
-	startGame(player.getHealth(), player.getDamage(), player.getHealingstat(), enemy.getHealth(), enemy.getDamage(), enemy.getHealingstat());
+	srand(time(0));
+	startGameWilhelm();
 	return 0;
 }
