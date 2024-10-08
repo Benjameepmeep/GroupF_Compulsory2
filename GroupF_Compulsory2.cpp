@@ -7,8 +7,11 @@
 
 int main()
 {
-    Wilhelm(); //This runs the game, just missing a while loop to play the game again
-    startGame();
-    std::cout << RNG(2, 1000);
+    // This runs the game, just missing a while loop to play the game again
+       Wilhelm();
+       startGame();
+       // start();
+       std::cout << "Random Number: " << RNG(2, 1000) << '\n';
+
     return 0;
 }

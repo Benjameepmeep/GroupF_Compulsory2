@@ -31,8 +31,6 @@ public:
 
 	void Speak();
 
-	// TODO: Create a system that handle damage between player and enemy, and gives remaining HP
-
 	void SetHeavyAttack(int hardDamage) 
 	{
 		hard_attack = hardDamage;
@@ -72,8 +70,6 @@ void receivePlayerInput()
 	std::cout << "Add health to player: " << std::endl;
 	short int x;
 	std::cin >> x;
-	if (!std::cin)
-	{
 		while (!std::cin)
 		{
 			if (!std::cin)
@@ -86,7 +82,6 @@ void receivePlayerInput()
 			}
 			else break;
 		}
-	}
 
 	std::cout << "Current Health: " << playerBase.currentHealth << "\n Health Added: " << x << std::endl;
 	playerBase.UpdateHealth(x);

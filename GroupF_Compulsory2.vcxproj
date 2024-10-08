@@ -129,9 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Benjamin.cpp" />
     <ClCompile Include="GroupF_Compulsory2.cpp" />
-    <ClCompile Include="Havard.cpp" />
     <ClCompile Include="Philip.cpp" />
-    <ClCompile Include="wesam.cpp" />
     <ClCompile Include="Wilhelm.cpp" />
   </ItemGroup>
   <ItemGroup>
