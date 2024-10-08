@@ -2,11 +2,11 @@
 #include <iostream>
 #include <string>
 
-int Wilhelm();
+bool requestRestart();
 int main();
 
-
-bool requestRestart();
+// From Player.h (Wilhelm & Benjamin)
+int Wilhelm();
 void start();
 void receivePlayerInput();
 
