@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Benjamin.cpp" />
-    <ClCompile Include="GroupF_Compulsory2.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Philip.cpp" />
     <ClCompile Include="Wilhelm.cpp" />
   </ItemGroup>
