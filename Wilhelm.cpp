@@ -62,31 +62,6 @@ public:
 
 };
 
-//TODO:
-//improving the while loop
-
-bool playAgain()
-{
-	bool restartW = true;
-	char x;
-	std::cout << "Do you want to play again (y/n)? ";
-	std::cin >> x;
-
-	switch (x)
-	{
-	case 'y':
-		restartW = true;
-		break;
-	case 'n':
-		restartW = false;
-		break;
-	default:
-		std::cout << "You need to input 'y' if you want to play again or 'n' if you don't " << std::endl;
-		playAgain();
-	}
-	return restartW;
-}
-
 void startGameWilhelm()
 {
 	int wins = 0;
@@ -132,11 +107,13 @@ void startGameWilhelm()
 			{
 				std::cout << "You won! \n";
 				wins++;
-				bool gameRestart = playAgain();
-				if (gameRestart == true) {
+				bool gameRestart = requestRestart();
+				if (gameRestart == true)
+				{
 					startOver = true;
 				}
-				else if (gameRestart == false) {
+				else if (gameRestart == false)
+				{
 					startOver = false;
 				}
 			}
@@ -166,25 +143,24 @@ void startGameWilhelm()
 				{
 					std::cout << "You lost! \n";
 					losses++;
-					bool gameRestart = playAgain();
-					if (gameRestart == true) {
+					bool gameRestart = requestRestart();
+					if (gameRestart == true)
+					{
 						startOver == true;
 					}
-					else if (gameRestart == false) {
+					else if (gameRestart == false)
+					{
 						startOver == false;
 					}
 				}
 			}
 		}
 		}
-	
-
 	std::cout << "Wins = " << wins << "\nLosses = " << losses << std::endl;
 }
 
 int Wilhelm() 
 {	
-	srand(time(0));
 	startGameWilhelm();
 	return 0;
 }

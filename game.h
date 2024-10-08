@@ -2,12 +2,11 @@
 #include <iostream>
 #include <string>
 
-// From game.h (Håvard)
-void requestRestart();
+int Wilhelm();
 int main();
 
-// From Player.h (Benjamin + Wilhelm)
-int Wilhelm();
+
+bool requestRestart();
 void start();
 void receivePlayerInput();
 
