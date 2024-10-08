@@ -63,20 +63,38 @@ public:
 };
 
 //TODO:
-//make a while loop, so the player can choose to play again
+//improving the while loop
+
+bool playAgain()
+{
+	bool restartW = true;
+	char x;
+	std::cout << "Do you want to play again (y/n)? ";
+	std::cin >> x;
+
+	switch (x)
+	{
+	case 'y':
+		restartW = true;
+		break;
+	case 'n':
+		restartW = false;
+		break;
+	default:
+		std::cout << "You need to input 'y' if you want to play again or 'n' if you don't " << std::endl;
+		playAgain();
+	}
+	return restartW;
+}
 
 void startGameWilhelm()
 {
 	int wins = 0;
 	int losses = 0;
 
-	//bool startOver = true;
-	//while (startOver = true)
-
-
-	//{
-
-
+	bool startOver = true;
+	while (startOver == true)
+	{
 		Player_Base player;
 		player.setHealth(10);
 		player.setHealingStat(2);
@@ -113,8 +131,14 @@ void startGameWilhelm()
 			if (enemy.getHealth() <= 0)
 			{
 				std::cout << "You won! \n";
-				wins += 1;
-				//startOver = false;
+				wins++;
+				bool gameRestart = playAgain();
+				if (gameRestart == true) {
+					startOver = true;
+				}
+				else if (gameRestart == false) {
+					startOver = false;
+				}
 			}
 
 			if (enemy.getHealth() > 0)
@@ -141,12 +165,18 @@ void startGameWilhelm()
 				if (player.getHealth() <= 0)
 				{
 					std::cout << "You lost! \n";
-					//startOver = false;
-					losses += 1;
+					losses++;
+					bool gameRestart = playAgain();
+					if (gameRestart == true) {
+						startOver == true;
+					}
+					else if (gameRestart == false) {
+						startOver == false;
+					}
 				}
 			}
 		}
-		//}
+		}
 	
 
 	std::cout << "Wins = " << wins << "\nLosses = " << losses << std::endl;
