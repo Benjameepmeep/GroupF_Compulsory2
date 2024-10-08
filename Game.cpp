@@ -31,18 +31,13 @@ bool requestRestart()
 }
 int main()
 {
-    //If we make a new gamemode, this is where we ask the user which mode to choose. For now, line 5 does nothing.
-    
-    //This line will call startGame(), which I will not add until that has been developed more.
-
-    // This runs the game, just missing a while loop to play the game again
     srand(time(0));
 
+    // This runs the game, just missing a while loop to play the game again
     Wilhelm();
     startGame();
     // start();
     std::cout << "Random Number: " << RNG(2, 1000) << '\n';
-
 
     return 0;
 }
