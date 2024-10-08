@@ -31,13 +31,11 @@ bool requestRestart()
 }
 int main()
 {
+
     srand(time(0));
 
-    // This runs the game, just missing a while loop to play the game again
+    // This runs the game
     Wilhelm();
-    startGame();
-    // start();
-    std::cout << "Random Number: " << RNG(2, 1000) << '\n';
 
     return 0;
 }
