@@ -133,11 +133,7 @@
     <ClCompile Include="Wilhelm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GroupF_Compulsory2.h" />
-    <ClInclude Include="Havard.h" />
-    <ClInclude Include="Philip.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="wesam.h" />
+    <ClInclude Include="game.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

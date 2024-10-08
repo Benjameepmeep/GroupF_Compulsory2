@@ -1,15 +1,13 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "Philip.h"
+#include "game.h"
 
 int RNG(int range, int start)
 {
     srand(static_cast<unsigned int>(time(0)));
     return (rand() % range) + start;
 }
-
-
 
 class Player
 {
