@@ -13,8 +13,6 @@ public:
 	std::string name = "";
 	unsigned short maxHealth = 1;
 	unsigned short int currentHealth = maxHealth;
-	unsigned short light_attack = 1;
-	unsigned short int hard_attack = 1;
 
 	void SetHealth(int health)
 	{
@@ -24,25 +22,8 @@ public:
 	{
 		currentHealth += number;
 	}
-	void SetLightAttack(int lightDamage) 
-	{
-		light_attack = lightDamage;
-	}
 
 	void Speak();
-
-	void SetHeavyAttack(int hardDamage) 
-	{
-		hard_attack = hardDamage;
-	}
-	void AttackOpponent(int damage) 
-	{
-		currentHealth -= damage;
-	}
-	void Heal(int healing) 
-	{
-		currentHealth += healing;
-	}
 
 	// TODO: Create a string function that can print out different kinds of information. : )
 	// Try use \n to create a new line char, or \t as a tab.
