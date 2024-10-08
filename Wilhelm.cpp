@@ -146,11 +146,11 @@ void startGameWilhelm()
 					bool gameRestart = requestRestart();
 					if (gameRestart == true)
 					{
-						startOver == true;
+						startOver = true;
 					}
 					else if (gameRestart == false)
 					{
-						startOver == false;
+						startOver = false;
 					}
 				}
 			}
