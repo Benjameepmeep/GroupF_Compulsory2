@@ -3,6 +3,7 @@
 #include <ctime>
 #include "game.h"
 
+//range is how big the range for number-generating is, start is where to start generating, IE RNG(3, 4) will give 4, 5 or 6
 int RNG(int range, int start)
 {
     srand(static_cast<unsigned int>(time(0)));
