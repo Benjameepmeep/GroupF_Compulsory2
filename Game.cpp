@@ -38,15 +38,25 @@ void getGold() //This function should get called whenever player wins.
 {
     goldGainAmount(); //Calling this function returns a random value between 10 and 25
     totalgold += goldGainAmount();
-    std::cout << "You got " << goldGainAmount() << " gold from that fight, and now have " << totalgold << " gold.";
+    std::cout << "You got " << goldGainAmount() << " gold from that fight, and now have " << totalgold << " gold.\n";
 }
 
 void loseGold() //This function should get called whenever enemy wins.
 {
     goldGainAmount(); //Using the same RNG for gaining gold (but different seed)
     totalgold -= goldGainAmount();
-    std::cout << "The enemy took " << goldGainAmount() << " gold from you, and now you have " << totalgold << " gold left.";
-}
+    int goldLoss = goldGainAmount();
+    if (totalgold < 0) //This sets negative values up to 0, and changes the loss to reflect that.
+    {
+        goldLoss += totalgold; //Double negative becomes positive, so that means this should be positive. I'm confused. Well, it works!
+        totalgold = 0;
+    }
+    std::cout << "The enemy took " << goldLoss << " gold from you, and now you have " << totalgold << " gold left.\n";
+    if (totalgold == 0)
+    {
+        std::cout << "You are broke!\n";
+    }
+} 
 
 int goldGainAmount() 
 {

@@ -106,6 +106,7 @@ void startGameWilhelm()
 			if (enemy.getHealth() <= 0)
 			{
 				std::cout << "You won! \n";
+				getGold();
 				wins++;
 				bool gameRestart = requestRestart();
 				if (gameRestart == true)
@@ -142,6 +143,7 @@ void startGameWilhelm()
 				if (player.getHealth() <= 0)
 				{
 					std::cout << "You lost! \n";
+					loseGold();
 					losses++;
 					bool gameRestart = requestRestart();
 					if (gameRestart == true)
