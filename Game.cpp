@@ -78,7 +78,7 @@ int main()
     std::cin.ignore(); //Empty input only meant for the user to press enter to continue.
 
     // This runs the game
-    Wilhelm();
+    GameLoop();
 
     return 0;
 }

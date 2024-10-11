@@ -43,7 +43,7 @@ public:
 		return healingStat;
 	}
 
-	int getDamage()
+	int getDamage() //Calculates if the damage is going to be a light attack or a hard attack
 	{
 		int critChance = rand() % 5 + 1;
 		int damage = 0;
@@ -62,15 +62,15 @@ public:
 
 };
 
-void startGameWilhelm()
+void GameLoop()
 {
-	int wins = 0;
+	int wins = 0; // Keeps track of how many times you win and lose
 	int losses = 0;
 
 	bool startOver = true;
-	while (startOver == true)
+	while (startOver == true) // It will keep running as long as the player want to
 	{
-		Player_Base player;
+		Player_Base player; // Makes the player and enemy
 		player.setHealth(10);
 		player.setHealingStat(2);
 		player.setLAttack(2);
@@ -85,7 +85,7 @@ void startGameWilhelm()
 
 		while (player.getHealth() > 0 and enemy.getHealth() > 0)
 		{
-			int action1 = rand() % 5 + 1;
+			int action1 = rand() % 5 + 1; // Determines what action the player will do
 			switch (action1)
 			{
 			case 1:
@@ -103,12 +103,12 @@ void startGameWilhelm()
 				break;
 			}
 
-			if (enemy.getHealth() <= 0)
+			if (enemy.getHealth() <= 0) // Checks if the player has won
 			{
 				std::cout << "You won! \n";
 				getGold();
 				wins++;
-				bool gameRestart = requestRestart();
+				bool gameRestart = requestRestart(); // Asks if the player would play again
 				if (gameRestart == true)
 				{
 					startOver = true;
@@ -119,10 +119,12 @@ void startGameWilhelm()
 				}
 			}
 
+			std::cin.ignore(); // Makes you press enter after each action to build tension
+
 			if (enemy.getHealth() > 0)
 			{
 
-				int action2 = rand() % 5 + 1;
+				int action2 = rand() % 5 + 1; // calculates which action the enemy will do
 				switch (action2)
 				{
 				case 1:
@@ -140,12 +142,12 @@ void startGameWilhelm()
 					break;
 				}
 
-				if (player.getHealth() <= 0)
+				if (player.getHealth() <= 0) // Checks if the enemy has won
 				{
 					std::cout << "You lost! \n";
 					loseGold();
 					losses++;
-					bool gameRestart = requestRestart();
+					bool gameRestart = requestRestart(); // asks if the player would play again
 					if (gameRestart == true)
 					{
 						startOver = true;
@@ -156,13 +158,8 @@ void startGameWilhelm()
 					}
 				}
 			}
+			std::cin.ignore(); // Makes you press enter after each action to build tension
 		}
-		}
-	std::cout << "Wins = " << wins << "\nLosses = " << losses << std::endl;
-}
-
-int Wilhelm() 
-{	
-	startGameWilhelm();
-	return 0;
+	}
+	std::cout << "Wins = " << wins << "\nLosses = " << losses << std::endl; // prints how many times you lost and won
 }

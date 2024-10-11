@@ -4,7 +4,7 @@
 bool requestRestart();
 
 // From Player.h (Wilhelm & Benjamin)
-int Wilhelm();
+void GameLoop();
 void start();
 void receivePlayerInput();
 
