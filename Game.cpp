@@ -70,8 +70,12 @@ int goldGainAmount()
 
 int main()
 {
-    totalgold = 30; //Sets the starting gold at 30
+    totalgold = 70; //Sets the starting gold
     srand(time(0));
+
+    //PLACEHOLDER TEXT! Change this text later if you have a better idea.
+    std::cout << "You walk through a forest. You encounter an enemy!\nYou have " << totalgold << " pieces of gold in your pouch. Press enter to fight!";
+    std::cin.ignore(); //Empty input only meant for the user to press enter to continue.
 
     // This runs the game
     Wilhelm();
