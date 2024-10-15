@@ -15,33 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GroupF_Compulsory2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Philip.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Wilhelm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Benjamin.cpp">
+    <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Philip.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Havard.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="wesam.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GroupF_Compulsory2.h">
+    <ClInclude Include="game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
